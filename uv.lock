@@ -720,8 +720,8 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "duckduckgo-search" },
-    { name = "langchain-community" },
+    { name = "duckduckgo-search", specifier = ">=8.1.1" },
+    { name = "langchain-community", specifier = ">=0.4.1" },
 ]
 
 [[package]]
