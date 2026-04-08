@@ -2,7 +2,7 @@
 
 This repository contains a collection of Jupyter Notebooks dedicated to learning and implementing various concepts and patterns using [LangGraph](https://python.langchain.com/docs/langgraph/). The notebooks are structured progressively to build up knowledge from basic concepts to advanced agent workflows.
 
-## Project Structure
+## Directory Structure
 
 The core learning materials are located within the `Notebooks/` directory. Each notebook focuses on a specific feature, component, or design pattern:
 
@@ -19,27 +19,31 @@ The core learning materials are located within the `Notebooks/` directory. Each 
 
 ## Setup & Dependencies
 
-This project relies on `uv` for fast dependency management, as defined in the `pyproject.toml` and `uv.lock` files.
+This project includes a `requirements.txt` file outlining all dependencies required to execute the notebooks. It also supports `uv` for fast dependency management as defined in `pyproject.toml`.
 
 **Prerequisites:**
 - Python `>= 3.10`
-- `uv` installed (`pip install uv`)
 
-### Installation Steps:
+### Installation Steps (pip):
 
-1. **Clone the repository and sync dependencies:**
+1. **Create and activate a virtual environment:**
    ```bash
-   uv sync
-   ```
-
-2. **Activate the local environment:**
-   ```bash
+   python -m venv .venv
    # On Windows
    .venv\Scripts\activate
-   
    # On macOS/Linux
    source .venv/bin/activate
    ```
+
+2. **Install the dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+Alternatively, if you prefer `uv`, you can install dependencies quickly using:
+```bash
+uv sync
+```
 
 3. **Environment Variables:**
    A `.env` file is required in the root directory to store your API keys (e.g., `OPENAI_API_KEY` or `GROQ_API_KEY`). Ensure this file is populated before running the notebooks.
